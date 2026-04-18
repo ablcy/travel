@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YanTravel - 全球景点推荐</title>
+  <meta name="description" content="探索全球最美景点，发现你的下一段旅程。涵盖自然奇观、历史古迹、现代都市等精选推荐。">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🌍</span>
+        <span class="logo-text">YanTravel</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">全部景点</a>
+        <a href="regions.html" class="nav-link">区域浏览</a>
+        <a href="about.html" class="nav-link">关于</a>
+      </div>
+      <div class="nav-actions">
+        <div class="search-box" id="searchBox">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" placeholder="搜索景点、国家..." autocomplete="off" />
+          <div class="search-shortcut">/</div>
+        </div>
+        <button class="theme-toggle" id="themeToggle" title="切换主题">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero 区域 -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-pattern"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="title-gradient">探索世界</span>
+        <span class="title-sub">发现你的下一段旅程</span>
+      </h1>
+      <p class="hero-desc">精选全球最值得去的景点，从自然奇观到人文古迹，每一次出发都是一次心灵的洗礼</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" data-count="0">0</span>
+          <span class="stat-label">精选景点</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="0">0</span>
+          <span class="stat-label">国家地区</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="0">0</span>
+          <span class="stat-label">大洲覆盖</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类过滤 -->
+  <section class="filter-section">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">✨ 全部</button>
+        <button class="filter-btn" data-filter="自然奇观">🏔️ 自然奇观</button>
+        <button class="filter-btn" data-filter="历史古迹">🏛️ 历史古迹</button>
+        <button class="filter-btn" data-filter="现代都市">🏙️ 现代都市</button>
+        <button class="filter-btn" data-filter="海岛沙滩">🏝️ 海岛沙滩</button>
+        <button class="filter-btn" data-filter="文化遗产">📜 文化遗产</button>
+        <button class="filter-btn" data-filter="探险胜地">🏕️ 探险胜地</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 景点列表 -->
+  <section class="spots-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">精选推荐</h2>
+        <p class="section-desc">每一处都值得你亲身体验</p>
+      </div>
+      <div class="spots-grid" id="spotsGrid">
+        <!-- 由 JS 动态渲染 -->
+      </div>
+      <div class="empty-state" id="emptyState" style="display:none;">
+        <span class="empty-icon">🔍</span>
+        <p>没有找到匹配的景点</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 随机推荐 -->
+  <section class="random-section">
+    <div class="container">
+      <div class="random-card" id="randomCard">
+        <div class="random-label">🎲 不知道去哪？</div>
+        <h3 class="random-name" id="randomName">点击下方按钮</h3>
+        <p class="random-location" id="randomLocation"></p>
+        <p class="random-desc" id="randomDesc"></p>
+        <div class="random-meta" id="randomMeta"></div>
+        <button class="random-btn" id="randomBtn">随机推荐一个景点 ✈️</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-logo">🌍 YanTravel</span>
+          <p>探索世界，发现美好</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">全部景点</a>
+          <a href="regions.html">区域浏览</a>
+          <a href="about.html">关于</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 YanTravel. Made with ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>关于 - YanTravel</title>
+  <meta name="description" content="关于 YanTravel - 全球景点推荐网站。">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🌍</span>
+        <span class="logo-text">YanTravel</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">全部景点</a>
+        <a href="regions.html" class="nav-link">区域浏览</a>
+        <a href="about.html" class="nav-link active">关于</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" title="切换主题">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 关于页面 -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-card">
+        <div class="about-icon">🌍</div>
+        <h1 class="about-title">关于 <span class="gradient-text">YanTravel</span></h1>
+        <p class="about-desc">
+          YanTravel 是一个精心策划的全球景点推荐网站，旨在帮助旅行爱好者发现世界各地最值得一去的目的地。
+        </p>
+        <div class="about-features">
+          <div class="feature-item">
+            <span class="feature-icon">🗺️</span>
+            <div>
+              <h3>精选推荐</h3>
+              <p>每一处景点都经过精心挑选，确保值得你亲身体验</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🎯</span>
+            <div>
+              <h3>分类清晰</h3>
+              <p>按类型、区域多维度分类，快速找到你感兴趣的景点</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🎲</span>
+            <div>
+              <h3>随机探索</h3>
+              <p>选择困难？让随机推荐帮你发现意外之美</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">📱</span>
+            <div>
+              <h3>响应式设计</h3>
+              <p>完美适配手机、平板和电脑，随时随地浏览</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-footer">
+          <p>Made with ❤️ by <strong>LuckYan</strong></p>
+          <p class="about-note">数据持续更新中，欢迎提供景点推荐！</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-logo">🌍 YanTravel</span>
+          <p>探索世界，发现美好</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">全部景点</a>
+          <a href="regions.html">区域浏览</a>
+          <a href="about.html">关于</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 YanTravel. Made with ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 主题切换
+    const toggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('yantravel-theme');
+    if (savedTheme === 'light') {
+      document.body.classList.add('light-theme');
+      toggle.textContent = '☀️';
+    }
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      toggle.textContent = isLight ? '☀️' : '🌙';
+      localStorage.setItem('yantravel-theme', isLight ? 'light' : 'dark');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>区域浏览 - YanTravel</title>
+  <meta name="description" content="按大洲和区域浏览全球景点推荐。">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🌍</span>
+        <span class="logo-text">YanTravel</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">全部景点</a>
+        <a href="regions.html" class="nav-link active">区域浏览</a>
+        <a href="about.html" class="nav-link">关于</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" title="切换主题">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 区域浏览 -->
+  <section class="regions-section">
+    <div class="container">
+      <div class="section-header">
+        <h1 class="section-title">区域浏览</h1>
+        <p class="section-desc">按大洲探索全球美景</p>
+      </div>
+      <div class="regions-grid" id="regionsGrid">
+        <!-- 由 JS 动态渲染 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-logo">🌍 YanTravel</span>
+          <p>探索世界，发现美好</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">全部景点</a>
+          <a href="regions.html">区域浏览</a>
+          <a href="about.html">关于</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 YanTravel. Made with ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="regions.js"></script>
+</body>
+</html>
